@@ -1,0 +1,4 @@
+<?php echo 42; ?>
+<script>
+const answer = 42
+</script>
