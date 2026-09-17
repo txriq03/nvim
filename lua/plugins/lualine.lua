@@ -2,9 +2,12 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
-      vim.schedule(function()
-        vim.opt.laststatus = 0
-      end)
+      opts.options = opts.options or {}
+      opts.options.component_separators = { left = "│", right = "│" }
+      opts.options.section_separators = { left = " ", right = ""   }
+      -- vim.schedule(function()
+      --   vim.opt.laststatus = 0
+      -- end)
 
       return opts
     end,
